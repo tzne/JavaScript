@@ -69,7 +69,7 @@ soma.toString()
 
 Para inserir variáveis em strings, utilza-se *Template strings*
 
-Template strings são representadas entre ``, e a variável vem em um placeholder, representado por ~${variavel}~
+Template strings são representadas entre ` `, e a variável vem em um placeholder, representado por ~${variavel}~
 
 #+begin_src js 
 
@@ -78,13 +78,13 @@ alert(`É um prazer te conhecer, ${nome`})
 
 #+end_src
 
-** Formatação de strings
+*** Formatação de strings
 #+begin_src js 
 string.length // quantos carateres a string tem
 string.toUpperCase() // TUDO PARA MAIÚSCULAS
-string.toLowerCase() // tudo para minúsculaS
+string.toLowerCase() // tudo para minúsculas
 #+end_src
-** Formatação de números
+*** Formatação de números
 #+begin_src js
 numero.toFixed(n) // define a quantidade de casas decimais para n
 numero.replace('.', ',') // substitui '.' por ','
