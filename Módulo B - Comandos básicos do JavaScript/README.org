@@ -1,0 +1,92 @@
+* Comandos básicos do JavaScript
+** Variáveis e tipos primitivos 
+Comentários podem ser representados como // ou /* */
+
+#+begin_src js 
+// representam um comentário de linha
+/* representa comentários de múltiplas linhas 
+qualquer coisa escrita entre os símbos 
+não será interpretada */
+#+end_src
+
+Em JS, uma variável é definida por 
+#+begin_src js
+// var:
+var variavel = "Valor" // 
+var variavel = 'Valor' // 
+var variavel = `Valor` // 
+
+//let:
+#+end_src
+
+Identificadores 
+    + Podem
+        + Começar com letra, $ ou _ 
+        + Conter letras ou números
+        + Conter acentos e símbolos 
+    + Não podem
+        + Começar com números
+        + Não podem conter espaços 
+        + Não podem ser palavras reservadas
+    + São case-sensitive
+
+Tipos primitivos 
+    + ~number~: float, int, etc;
+        + ~Infinity~;
+        + ~NaN~: Not a Number;
+    + ~string~;
+    + ~boolean~;
+    + ~null~;
+    + ~undefined~;
+    + ~object~;
+        + ~Array~;
+    + ~function~;
+
+O tipo de uma variável pode ser verificado com o comando ~typeof~
+
+#+begin_src js
+var nome = "felipe"
+
+typeof nome;
+#+end_src
+
+** Tratamento de dados
+Para converter um valor para número, utiliza-se ~Number~
+
++=begin_src js
+var n1  = Number.parseInt(window.prompt("Digite um número")) // converter par int
+var n2  = Number.parseFloat(window.prompt("Digite outro número")) // converte para float 
+var n3  = Number(window.prompt("Digite outro número")) // converte simplesmente para number
+
+#+end_src
+
+Para converter para string, é possível utilizar ~String()~ ou ~valor.toSting()~
+
++=begin_src js
+var valor = String(n1+n2) // define uma variável do tipo string com o valor da soma entre n1 e n2
+soma.toString()
+#+end_src
+
+Para inserir variáveis em strings, utilza-se *Template strings*
+
+Template strings são representadas entre ``, e a variável vem em um placeholder, representado por ~${variavel}~
+
+#+begin_src js 
+
+var nome = felipe
+alert(`É um prazer te conhecer, ${nome`})
+
+#+end_src
+
+** Formatação de strings
+#+begin_src js 
+string.length // quantos carateres a string tem
+string.toUpperCase() // TUDO PARA MAIÚSCULAS
+string.toLowerCase() // tudo para minúsculaS
+#+end_src
+** Formatação de números
+#+begin_src js
+numero.toFixed(n) // define a quantidade de casas decimais para n
+numero.replace('.', ',') // substitui '.' por ','
+numero,toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // formata o número para um valor em reais
+#+end_src
