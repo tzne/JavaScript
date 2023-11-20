@@ -1,1 +1,1 @@
-Curso de JavaScript do [[https://www.youtube.com/@CursoemVideo]]. com o professor Gustavo Guanabara
+Curso de JavaScript do [[https://www.youtube.com/@CursoemVideo][Curso em vídeo]]. com o professor Gustavo Guanabara
