@@ -53,7 +53,7 @@ typeof nome;
 ** Tratamento de dados
 Para converter um valor para número, utiliza-se ~Number~
 
-+=begin_src js
+#+begin_src js
 var n1  = Number.parseInt(window.prompt("Digite um número")) // converter par int
 var n2  = Number.parseFloat(window.prompt("Digite outro número")) // converte para float 
 var n3  = Number(window.prompt("Digite outro número")) // converte simplesmente para number
@@ -62,7 +62,7 @@ var n3  = Number(window.prompt("Digite outro número")) // converte simplesmente
 
 Para converter para string, é possível utilizar ~String()~ ou ~valor.toSting()~
 
-+=begin_src js
+#+begin_src js
 var valor = String(n1+n2) // define uma variável do tipo string com o valor da soma entre n1 e n2
 soma.toString()
 #+end_src
