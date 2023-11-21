@@ -15,8 +15,6 @@ Em JS, uma variável é definida por
 var variavel = "Valor" // 
 var variavel = 'Valor' // 
 var variavel = `Valor` // 
-
-//let:
 #+end_src
 
 Identificadores 
@@ -90,3 +88,54 @@ numero.toFixed(n) // define a quantidade de casas decimais para n
 numero.replace('.', ',') // substitui '.' por ','
 numero,toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // formata o número para um valor em reais
 #+end_src
+** Operadores
+Ordem de precedencia 
+    1. Aritméticos 
+    2. Relacionais
+    3. Lógicos
+*** Operadores aritméticos 
++ +: soma 
++ -: diferença 
++ *: multiplicação
++ /: divisão real
++ %: resto da divisão inteira
++ **: potenciação
+
+A ordem de precedência é a padrão (matemática)
+
+É possível autoreferenciar uma variável
+
+#+begin_src js
+var n = 4
+n += 1 // n == 5
+#+end_src
+
+A autoreferenciação é válida para qualquer operador aritmético
+
+**** Operadores de incremento
+#+begin_src js
+var x = 1 
+x++ // x == 2
+x-- // x == 1
+#+end_src
+
+*** Operadores relacionais 
+Retornam valores booleanos
++ >
++ <
++ >=
++ <=
++ ==
+    + Operadores de identidade
+        + 5 == 5: checa igualdade
+        + 5 == '5': checa o valor, independente do tipo
+        + 5 === 5 (operador de identidade restrita): checa o valor e o tipo
++ !=
+*** Operadores lógicos
++ !: negação
++ &&: conjunção
++ ||: disjunção
+*** Operadores ternário
+teste ? consequência positiva: consequência negativa 
+#+begin_src js
+media >=5 ? console.log("Aprovado"):console.log("reprovado")
