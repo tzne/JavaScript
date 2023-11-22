@@ -55,7 +55,6 @@ Para converter um valor para número, utiliza-se ~Number~
 var n1  = Number.parseInt(window.prompt("Digite um número")) // converter par int
 var n2  = Number.parseFloat(window.prompt("Digite outro número")) // converte para float 
 var n3  = Number(window.prompt("Digite outro número")) // converte simplesmente para number
-
 #+end_src
 
 Para converter para string, é possível utilizar ~String()~ ou ~valor.toSting()~
@@ -70,10 +69,8 @@ Para inserir variáveis em strings, utilza-se *Template strings*
 Template strings são representadas entre ` `, e a variável vem em um placeholder, representado por ~${variavel}~
 
 #+begin_src js 
-
 var nome = felipe
 alert(`É um prazer te conhecer, ${nome`})
-
 #+end_src
 
 *** Formatação de strings
