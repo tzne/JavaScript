@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(54, 53, 53);
+            color: white;
+            font: normal 13pt Arial
+        }
+        div {
+            background-color: black;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Js</p>
+    <div class="msg">Clique em mim</div>
+    
+    <script>
+        window.document.write("Hello world!<br>")
+        window.document.write(window.navigator.appName)
+        // var letra = window.document.getElementsByTagName('h1')[0]
+        // window.document.write(letra.innerText)
+        window.document.querySelector('div.msg').innerText = "Mudei a div pelo JS"
+    </script>
+</body>
+</html>

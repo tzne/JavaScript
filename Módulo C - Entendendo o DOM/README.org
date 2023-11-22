@@ -1,0 +1,73 @@
+* Entendendo o DOM
+Document Object Model: conjunto de objetos no navegador que da acesso aos componentes internos no site 
+
+Árvore *DOM*
+    + window: janela do navegador 
+        + location: localização do site (url, localaização, página, etc)
+        + document: documento atual 
+            + html
+                + head
+                    + meta 
+                    + tittle
+                + body
+                    + h1,h2,h3
+                    + p 
+                        + strong
+                    + div
+        + history
+
+É possível selecionar elementos para navegação na árvore DOM
+    + Por marca (tagname)
+        #+begin_src js
+        window.document.getElementByTagName(h1)
+        window.document.getElementByTagName(p)[0] // pega primeiro caractere do <p>
+
+        var.innerText // pega apenas o texto
+        var.innerHTML // pega apenas o texto e as formatações
+        #+end_src
+    + Por ID 
+        #+begin_src js
+        window.document.getElementById()
+        #+end_src
+    + Por Nome
+        #+begin_src js
+        window.document.getElementsByName()
+        #+end_src
+    + Por classe 
+        #+begin_src js 
+        window.document.getElementsByClassName()
+        #+end_src
+    + Por seletor
+        #+begin_src js 
+        window.document.querySelector(div.classe); // seleciona uma div de classe "classe"
+        window.document.querySelector(div#código); // seleciona uma div com id "código"
+        #+end_src
+
+** Eventos DOM
++ mouseenter: colocar o mouse sobre o elemento
++ mousemove: mover o mouse dentro do elemento
++ mousedown: momento de pressionar o elemento (clickdown)
++ mouseup: momento de soltar o elemento (clickup)
++ mouseclick: click no elemento 
++ mouseout: tirar do mouse do elemento
+
+Em JS, funções são declarados por 
+#+begin_src js 
+function nomeDaFuncao(parametros) { // é possível criar funções anônimas (function {})
+    console.log("Hello World")
+}
+#+end_src
+
+É possível detectar eventos DOM de 2 maneira
+    + Por atributos na tag HTML
+        #+begin_src js 
+        <div id="area" onclick="clique()" onmouseenter="entrada()" onmouseout="saida()">
+        #+end_src
+    + *Event Listeners* no JS
+        #+begin_src js
+        var caixa = window.document.getElementById('area')
+
+        caixa.addEventListener('click', clique) // Chama a função clique
+        caixa.addEventListener('mouseenter', entrada) // Chama a função entrada
+        caixa.addEventListener('mouseout', saida) // Chama a função saida
+        #+end_src
